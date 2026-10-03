@@ -25,53 +25,100 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Navbar Scroll Behavior ──
   const navbar = document.getElementById('navbar');
-  let lastScroll = 0;
 
   function updateNavbar() {
     const scrollY = window.scrollY;
-    
-    if (scrollY > 80) {
-      navbar.classList.remove('navbar--transparent');
-      navbar.classList.add('navbar--solid');
+    if (scrollY > 60) {
+      navbar.classList.add('navbar--scrolled');
     } else {
-      navbar.classList.remove('navbar--solid');
-      navbar.classList.add('navbar--transparent');
+      navbar.classList.remove('navbar--scrolled');
     }
-    
-    lastScroll = scrollY;
   }
 
   window.addEventListener('scroll', updateNavbar, { passive: true });
   updateNavbar();
+
+  // ── Active link highlighting ──
+  const navLinks = document.querySelectorAll('.navbar__link');
+  const sections = [];
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const section = document.querySelector(href);
+      if (section) sections.push({ link, section });
+    }
+  });
+
+  function updateActiveLink() {
+    const scrollMid = window.scrollY + window.innerHeight / 2.5;
+    let current = null;
+    sections.forEach(({ section }) => {
+      if (section.offsetTop <= scrollMid) current = section.id;
+    });
+    sections.forEach(({ link, section }) => {
+      if (section.id === current) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
 
   // ── Mobile Menu ──
   const navToggle = document.getElementById('navToggle');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileLinks = document.querySelectorAll('[data-mobile-link]');
 
-  function toggleMobileMenu() {
-    const isOpen = navToggle.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-    navToggle.setAttribute('aria-expanded', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+  function openMobileMenu() {
+    navToggle.classList.add('active');
+    mobileMenu.classList.add('active');
+    navToggle.setAttribute('aria-expanded', 'true');
+  }
 
-    // Force navbar to solid when menu is open
+  function closeMobileMenu() {
+    navToggle.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleMobileMenu() {
+    const isOpen = mobileMenu.classList.contains('active');
     if (isOpen) {
-      navbar.classList.remove('navbar--transparent');
-      navbar.classList.add('navbar--solid');
+      closeMobileMenu();
     } else {
-      updateNavbar();
+      openMobileMenu();
     }
   }
 
   navToggle.addEventListener('click', toggleMobileMenu);
 
+  // Close on link click
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (mobileMenu.classList.contains('active')) {
-        toggleMobileMenu();
-      }
+      closeMobileMenu();
     });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+      closeMobileMenu();
+      navToggle.focus();
+    }
+  });
+
+  // Close when clicking outside the navbar/menu
+  document.addEventListener('click', (e) => {
+    if (
+      mobileMenu.classList.contains('active') &&
+      !navbar.contains(e.target) &&
+      !mobileMenu.contains(e.target)
+    ) {
+      closeMobileMenu();
+    }
   });
 
   // ── Smooth Scroll for anchor links ──
@@ -83,8 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height'));
-        const offsetTop = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+        // Account for fixed navbar height
+        const navHeight = navbar ? navbar.offsetHeight : 72;
+        const offsetTop = target.getBoundingClientRect().top + window.scrollY - navHeight;
         
         window.scrollTo({
           top: offsetTop,
@@ -341,7 +389,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── High-Performance Luxury Parallax Controller ──
   const heroSection = document.getElementById('hero');
   const heroBg = document.querySelector('.hero__bg');
+  // Support both video and img in hero
+  const heroVideo = document.querySelector('.hero__video');
   const heroImg = document.querySelector('.hero__bg img');
+  const heroMedia = heroVideo || heroImg;
   const sectionHeadings = document.querySelectorAll('.section-header h2');
   const kolamDividers = document.querySelectorAll('.kolam-divider');
   const venueCards = document.querySelectorAll('.venue-card');
@@ -507,11 +558,50 @@ document.addEventListener('DOMContentLoaded', () => {
   checkParallaxActivation();
   window.addEventListener('resize', checkParallaxActivation, { passive: true });
 
+  // ── Hero Video Controls ──
+  if (heroVideo) {
+    // Autoplay resilience: try to play after user interaction if autoplay was blocked
+    heroVideo.play().catch(() => {
+      const resumeOnInteract = () => {
+        heroVideo.play().catch(() => {});
+        document.removeEventListener('click', resumeOnInteract);
+        document.removeEventListener('touchstart', resumeOnInteract);
+      };
+      document.addEventListener('click', resumeOnInteract, { once: true });
+      document.addEventListener('touchstart', resumeOnInteract, { once: true });
+    });
+
+    // Pause video when tab is hidden (save battery/bandwidth)
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        heroVideo.pause();
+      } else {
+        heroVideo.play().catch(() => {});
+      }
+    });
+  }
+
   // ── Respect prefers-reduced-motion ──
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   
   if (prefersReducedMotion.matches) {
     fadeElements.forEach(el => el.classList.add('visible'));
     revealTargets.forEach(el => el.classList.add('is-revealed'));
+    // Pause video for users who prefer reduced motion
+    if (heroVideo) {
+      heroVideo.pause();
+      heroVideo.currentTime = 0;
+    }
   }
+
+  // Listen for changes to the preference at runtime
+  prefersReducedMotion.addEventListener('change', (e) => {
+    if (heroVideo) {
+      if (e.matches) {
+        heroVideo.pause();
+      } else {
+        heroVideo.play().catch(() => {});
+      }
+    }
+  });
 });
