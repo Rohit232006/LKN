@@ -218,7 +218,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openLightbox(index) {
     visibleImages = getVisibleGalleryImages();
-    currentLightboxIndex = index;
+    const clickedItem = galleryItems[index];
+    const clickedImg = clickedItem ? clickedItem.querySelector('img') : null;
+    const clickedSrc = clickedImg ? clickedImg.src : null;
+    const matchedIdx = visibleImages.findIndex(img => img.src === clickedSrc);
+    currentLightboxIndex = matchedIdx !== -1 ? matchedIdx : 0;
     updateLightboxImage();
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -439,8 +443,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const heroH = heroSection.offsetHeight;
       if (scrollY <= heroH + 100) {
         const heroProgress = Math.min(1, Math.max(0, scrollY / heroH));
-        const heroTranslateY = (scrollY * 0.32).toFixed(2);
-        const heroScale = (1 + heroProgress * 0.065).toFixed(4);
+        const heroTranslateY = (scrollY * 0.12).toFixed(2);
+        const heroScale = (1 + heroProgress * 0.02).toFixed(4);
         heroBg.style.transform = `translate3d(0, ${heroTranslateY}px, 0) scale(${heroScale})`;
       }
     }
