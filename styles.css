@@ -785,6 +785,10 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
+  /* Source: 1920×1080 landscape file — portrait content, no rotation metadata.
+     After rotate(90deg) (RIGHT/clockwise): the 1920px axis becomes vertical,
+     1080px axis becomes horizontal. Size: width=100vh, height=100vw ensures
+     the rotated frame covers the full hero with no gaps and no upscaling. */
   width: 100vh;
   height: 100vw;
   width: 100cqh;
@@ -795,10 +799,10 @@ h3 {
   max-height: none;
   object-fit: cover;
   object-position: center center;
-  will-change: transform;
   transform-origin: center center;
   transform: translate(-50%, -50%) rotate(-90deg);
   display: block;
+  image-rendering: high-quality;
 }
 
 .hero__overlay {
@@ -1097,6 +1101,234 @@ h3 {
   font-size: 14px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+/* ── Premium Minimal Facility Spec Cards ── */
+.facility-specs {
+  margin-bottom: var(--sp-8);
+}
+
+.facility-specs__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-5);
+}
+
+.facility-card {
+  background: var(--white);
+  border: 1px solid var(--champagne);
+  border-radius: var(--radius-md);
+  padding: var(--sp-6) var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(43, 27, 21, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color var(--duration) var(--ease);
+}
+
+.facility-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--deep-cocoa), var(--caramel));
+  opacity: 0;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.facility-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--caramel);
+  box-shadow: 0 12px 30px rgba(43, 27, 21, 0.10);
+}
+
+.facility-card:hover::before {
+  opacity: 1;
+}
+
+.facility-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-4);
+}
+
+.facility-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--soft-sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--deep-cocoa);
+}
+
+.facility-card__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.facility-card__badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(166, 124, 82, 0.12);
+  color: var(--deep-cocoa);
+  border: 1px solid rgba(166, 124, 82, 0.25);
+}
+
+.facility-card__badge--alert {
+  background: rgba(192, 57, 43, 0.1);
+  color: #9c271d;
+  border-color: rgba(192, 57, 43, 0.25);
+}
+
+.facility-card__title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--deep-ink);
+  margin-bottom: var(--sp-2);
+}
+
+.facility-card__value {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--mocha);
+  margin-bottom: var(--sp-2);
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+}
+
+.facility-card__value span.accent {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--deep-cocoa);
+}
+
+.facility-card__desc {
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 1.55;
+}
+
+/* ── Video Gallery Section ── */
+.video-showcase {
+  margin-bottom: var(--sp-8);
+}
+
+.video-player-card {
+  background: var(--white);
+  border: 1px solid var(--champagne);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(43, 27, 21, 0.08);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  transition: box-shadow var(--duration) var(--ease);
+}
+
+.video-player-card:hover {
+  box-shadow: 0 16px 40px rgba(43, 27, 21, 0.12);
+}
+
+.video-player-card__media {
+  position: relative;
+  background: #000;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-player-card__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-player-card__body {
+  padding: var(--sp-7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video-player-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--caramel);
+  margin-bottom: var(--sp-3);
+}
+
+.video-player-card__badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E74C3C;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.video-player-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 600;
+  color: var(--deep-ink);
+  margin-bottom: var(--sp-3);
+  line-height: 1.2;
+}
+
+.video-player-card__desc {
+  font-size: 15px;
+  color: var(--warm-gray);
+  line-height: 1.6;
+  margin-bottom: var(--sp-5);
+}
+
+.video-player-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-6);
+}
+
+.video-player-card__feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: 14px;
+  color: var(--espresso);
+  font-weight: 500;
+}
+
+.video-player-card__feature-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--caramel);
+  flex-shrink: 0;
 }
 
 /* ── Venue Showcase ── */
@@ -2124,6 +2356,14 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .facility-specs__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-player-card {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
   .venue-showcase__grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -2244,7 +2484,24 @@ h3 {
     height: 200px;
   }
 
-  /* Features */
+  /* Facility Specs & Features */
+  .facility-specs__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+  }
+
+  .video-player-card {
+    grid-template-columns: 1fr;
+  }
+
+  .video-player-card__media {
+    min-height: 240px;
+  }
+
+  .video-player-card__body {
+    padding: var(--sp-5);
+  }
+
   .features__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-3);
