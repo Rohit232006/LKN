@@ -18,7 +18,7 @@
     content="Air-conditioned celebration hall for weddings, receptions, birthdays and corporate events. Near Shenoy Nagar Metro.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lknbanquet.in/">
-  <meta property="og:image" content="images/OFFICIAL/d923da3a-1849-4b51-ab5f-8a8a697c37f6.jpg">
+  <meta property="og:image" content="images/hero-banner.jpg">
 
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="apple-touch-icon" href="images/logo.png">
@@ -148,10 +148,7 @@
        ======================================== -->
   <section class="hero" id="hero" aria-label="Welcome to LKN Banquet">
     <div class="hero__bg">
-      <video class="hero__video" autoplay muted loop playsinline preload="auto"
-        aria-hidden="true">
-        <source src="https://res.cloudinary.com/digovrzd7/video/upload/v1791274194/LKN_WEB_VDO_flf1hj.mp4" type="video/mp4">
-      </video>
+      <img src="images/hero-banner.jpg" alt="LKN Banquet Grand Celebration Stage" class="hero__img" fetchpriority="high" decoding="async">
     </div>
     <div class="hero__overlay"></div>
 
@@ -204,12 +201,15 @@
       <div class="fact-bar__grid">
         <div class="fact-card fade-up">
           <div class="fact-card__icon">
+            <!-- Seating rows: hall capacity -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 00-3-3.87" />
-              <path d="M16 3.13a4 4 0 010 7.75" />
+              <path d="M4 10V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3" />
+              <path d="M4 10H2v4h2" />
+              <path d="M20 10h2v4h-2" />
+              <path d="M5 14v3" />
+              <path d="M19 14v3" />
+              <rect x="5" y="10" width="14" height="4" rx="1" />
             </svg>
           </div>
           <div class="fact-card__value">350 Seats</div>
@@ -218,13 +218,14 @@
 
         <div class="fact-card fade-up">
           <div class="fact-card__icon">
+            <!-- Covered cloche: dining hall -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round">
-              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-              <line x1="6" y1="1" x2="6" y2="4"></line>
-              <line x1="10" y1="1" x2="10" y2="4"></line>
-              <line x1="14" y1="1" x2="14" y2="4"></line>
+              <path d="M3 14c0-4.418 4.03-8 9-8s9 3.582 9 8" />
+              <line x1="2" y1="14" x2="22" y2="14" />
+              <line x1="2" y1="18" x2="22" y2="18" />
+              <line x1="12" y1="6" x2="12" y2="4" />
+              <path d="M10 4h4" />
             </svg>
           </div>
           <div class="fact-card__value">150 Seats</div>
@@ -233,10 +234,16 @@
 
         <div class="fact-card fade-up">
           <div class="fact-card__icon">
+            <!-- Double bed: stay & bridal suite -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
+              <path d="M3 7v10" />
+              <path d="M21 7v10" />
+              <path d="M3 11h18" />
+              <path d="M3 17h18" />
+              <path d="M3 7h18" />
+              <rect x="7" y="11" width="4" height="3" rx="0.5" />
+              <rect x="13" y="11" width="4" height="3" rx="0.5" />
             </svg>
           </div>
           <div class="fact-card__value">AC Rooms</div>
@@ -245,12 +252,13 @@
 
         <div class="fact-card fade-up">
           <div class="fact-card__icon">
+            <!-- Key with fob: valet parking -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round">
-              <rect x="1" y="3" width="15" height="13" />
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-              <circle cx="5.5" cy="18.5" r="2.5" />
-              <circle cx="18.5" cy="18.5" r="2.5" />
+              <circle cx="8" cy="8" r="3.5" />
+              <line x1="11.5" y1="11.5" x2="20" y2="20" />
+              <line x1="17" y1="17" x2="17" y2="20" />
+              <line x1="20" y1="17" x2="20" y2="20" />
             </svg>
           </div>
           <div class="fact-card__value">Valet</div>
@@ -259,10 +267,17 @@
 
         <div class="fact-card fade-up">
           <div class="fact-card__icon">
+            <!-- Snowflake: centralised AC -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-              <polyline points="22 4 12 14.01 9 11.01" />
+              <line x1="12" y1="2" x2="12" y2="22" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M8.5 5.5 12 2l3.5 3.5" />
+              <path d="M8.5 18.5 12 22l3.5-3.5" />
+              <path d="M5.5 8.5 2 12l3.5 3.5" />
+              <path d="M18.5 8.5 22 12l-3.5 3.5" />
+              <line x1="8" y1="8" x2="16" y2="16" />
+              <line x1="16" y1="8" x2="8" y2="16" />
             </svg>
           </div>
           <div class="fact-card__value">Full AC</div>
@@ -271,10 +286,16 @@
 
         <div class="fact-card fade-up">
           <div class="fact-card__icon">
+            <!-- Metro train: Shenoy Nagar station -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round">
-              <circle cx="12" cy="10" r="3" />
-              <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z" />
+              <rect x="3" y="4" width="18" height="12" rx="2" />
+              <line x1="3" y1="9" x2="21" y2="9" />
+              <circle cx="7.5" cy="14" r="1" />
+              <circle cx="16.5" cy="14" r="1" />
+              <line x1="7" y1="16" x2="5" y2="20" />
+              <line x1="17" y1="16" x2="19" y2="20" />
+              <line x1="5" y1="20" x2="19" y2="20" />
             </svg>
           </div>
           <div class="fact-card__value">Near Metro</div>
@@ -294,7 +315,8 @@
         <h2 id="events-heading">Made for Every Kind of Gathering</h2>
         <div class="kolam-divider"><span class="kolam-dot"></span></div>
         <p class="section-subtitle" style="margin: 0 auto;">
-          From intimate family functions to grand wedding receptions — our hall adapts seamlessly to your special occasion.
+          From intimate family functions to grand wedding receptions — our hall adapts seamlessly to your special
+          occasion.
         </p>
       </div>
 
@@ -309,7 +331,8 @@
           <div class="event-card__body">
             <h3 class="event-card__title">Weddings & Muhurtham</h3>
             <p class="event-card__desc">
-              A spacious air-conditioned hall with 350 seating capacity, dedicated dining for 150 guests, grand stage setups, and AC rooms for the wedding family.
+              A spacious air-conditioned hall with 350 seating capacity, dedicated dining for 150 guests, grand stage
+              setups, and AC rooms for the wedding family.
             </p>
             <a href="#contact" class="event-card__cta">
               Explore Weddings <span class="arrow">→</span>
@@ -327,7 +350,8 @@
           <div class="event-card__body">
             <h3 class="event-card__title">Receptions & Engagements</h3>
             <p class="event-card__desc">
-              Host grand evening receptions with crystal chandeliers, bespoke in-house stage décor, convenient valet parking, and floating capacity up to 500 guests.
+              Host grand evening receptions with crystal chandeliers, bespoke in-house stage décor, convenient valet
+              parking, and floating capacity up to 500 guests.
             </p>
             <a href="#contact" class="event-card__cta">
               Plan a Reception <span class="arrow">→</span>
@@ -345,7 +369,8 @@
           <div class="event-card__body">
             <h3 class="event-card__title">Family Functions & Birthdays</h3>
             <p class="event-card__desc">
-              Celebrate milestones in pure comfort — Seemantham, Upanayanam, Ayush Homam, Betrothals, and birthday parties in a central Chennai location.
+              Celebrate milestones in pure comfort — Seemantham, Upanayanam, Ayush Homam, Betrothals, and birthday
+              parties in a central Chennai location.
             </p>
             <a href="#contact" class="event-card__cta">
               Plan a Celebration <span class="arrow">→</span>
@@ -379,9 +404,13 @@
             <div>
               <div class="facility-card__header">
                 <div class="facility-card__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                    <polyline points="9 22 9 12 15 12 15 22" />
+                  <!-- Grand hall archway: main celebration hall -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 21V9l9-7 9 7v12" />
+                    <path d="M9 21v-7a3 3 0 0 1 6 0v7" />
+                    <line x1="3" y1="21" x2="21" y2="21" />
+                    <line x1="8" y1="9" x2="16" y2="9" />
                   </svg>
                 </div>
                 <span class="facility-card__badge">Celebration Space</span>
@@ -391,7 +420,8 @@
                 <span class="accent">350</span> seating capacity
               </div>
               <p class="facility-card__desc">
-                Spacious centralised air-conditioned celebration hall with crystal chandeliers, large stage, and floating reception capacity up to 500 guests.
+                Spacious centralised air-conditioned celebration hall with crystal chandeliers, large stage, and
+                floating reception capacity up to 500 guests.
               </p>
             </div>
           </div>
@@ -401,12 +431,15 @@
             <div>
               <div class="facility-card__header">
                 <div class="facility-card__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                    <line x1="6" y1="1" x2="6" y2="4"></line>
-                    <line x1="10" y1="1" x2="10" y2="4"></line>
-                    <line x1="14" y1="1" x2="14" y2="4"></line>
+                  <!-- Fork and knife with plate: dining hall -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="13" r="4" />
+                    <path d="M7 3v4a2 2 0 0 0 4 0V3" />
+                    <line x1="9" y1="3" x2="9" y2="7" />
+                    <line x1="17" y1="3" x2="17" y2="8" />
+                    <path d="M17 8a2 2 0 0 1-2 2v9" />
+                    <line x1="3" y1="20" x2="21" y2="20" />
                   </svg>
                 </div>
                 <span class="facility-card__badge">Banquet Dining</span>
@@ -416,7 +449,8 @@
                 <span class="accent">150</span> seating capacity
               </div>
               <p class="facility-card__desc">
-                Dedicated air-conditioned dining area with clean, organized banquet tables, hygienic serving counters, and continuous 24/7 water supply.
+                Dedicated air-conditioned dining area with clean, organized banquet tables, hygienic serving counters,
+                and continuous 24/7 water supply.
               </p>
             </div>
           </div>
@@ -426,10 +460,14 @@
             <div>
               <div class="facility-card__header">
                 <div class="facility-card__icon" style="background: rgba(192, 57, 43, 0.08); color: #C0392B;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  <!-- Scissors crossed: no external decoration -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="6" cy="6" r="2.5" />
+                    <circle cx="6" cy="18" r="2.5" />
+                    <path d="M8 6.5 20 17" />
+                    <path d="M8 17.5 20 7" />
+                    <path d="M14 12h6" />
                   </svg>
                 </div>
                 <span class="facility-card__badge facility-card__badge--alert">Hall Guideline</span>
@@ -439,7 +477,8 @@
                 Own decoration is NOT allowed
               </div>
               <p class="facility-card__desc">
-                To preserve venue infrastructure, electrical safety, and aesthetics, curated in-house premium decoration and stage packages are exclusively provided.
+                To preserve venue infrastructure, electrical safety, and aesthetics, curated in-house premium decoration
+                and stage packages are exclusively provided.
               </p>
             </div>
           </div>
@@ -449,20 +488,28 @@
             <div>
               <div class="facility-card__header">
                 <div class="facility-card__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
+                  <!-- Sun-and-moon split clock: two session slots -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <line x1="12" y1="3" x2="12" y2="21" />
+                    <line x1="12" y1="7" x2="14" y2="9" />
+                    <line x1="12" y1="15" x2="10" y2="17" />
+                    <line x1="12" y1="7" x2="10" y2="9" />
+                    <polyline points="12 12 15.5 10" />
                   </svg>
                 </div>
                 <span class="facility-card__badge">Session Slots</span>
               </div>
               <h3 class="facility-card__title">Timings</h3>
-              <div class="facility-card__value" style="font-size: 14px; color: var(--espresso); flex-direction: column; align-items: flex-start; gap: 4px;">
+              <div class="facility-card__value"
+                style="font-size: 14px; color: var(--espresso); flex-direction: column; align-items: flex-start; gap: 4px;">
                 <span>☀️ Morning: <strong>6:00 AM – 2:00 PM</strong></span>
                 <span>🌙 Evening: <strong>2:00 PM – 11:00 PM</strong></span>
               </div>
               <p class="facility-card__desc" style="margin-top: 6px;">
-                Two convenient booking slots (6:00 AM–2:00 PM and 2:00 PM–11:00 PM), or combined full-day bookings for auspicious wedding celebrations.
+                Two convenient booking slots (6:00 AM–2:00 PM and 2:00 PM–11:00 PM), or combined full-day bookings for
+                auspicious wedding celebrations.
               </p>
             </div>
           </div>
@@ -472,9 +519,15 @@
             <div>
               <div class="facility-card__header">
                 <div class="facility-card__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                  <!-- Banknote with check mark: advance deposit -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="13" rx="1.5" />
+                    <line x1="2" y1="11" x2="22" y2="11" />
+                    <line x1="6" y1="15" x2="8" y2="15" />
+                    <line x1="11" y1="15" x2="14" y2="15" />
+                    <path d="M5 4h14" />
+                    <path d="M8 2h8" />
                   </svg>
                 </div>
                 <span class="facility-card__badge">Booking Deposit</span>
@@ -484,7 +537,8 @@
                 <span class="accent">50%</span> of the total cost
               </div>
               <p class="facility-card__desc">
-                Event dates are officially reserved upon payment of a 50% advance deposit. Transparent pricing with clear terms and no hidden charges.
+                Event dates are officially reserved upon payment of a 50% advance deposit. Transparent pricing with
+                clear terms and no hidden charges.
               </p>
             </div>
           </div>
@@ -496,10 +550,16 @@
       <div class="features__grid">
         <div class="feature-card fade-up">
           <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            <!-- Metro/train: proximity to station -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
               stroke-linejoin="round">
-              <circle cx="12" cy="10" r="3" />
-              <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z" />
+              <rect x="3" y="4" width="18" height="12" rx="2" />
+              <line x1="3" y1="9" x2="21" y2="9" />
+              <circle cx="7.5" cy="14" r="1" />
+              <circle cx="16.5" cy="14" r="1" />
+              <line x1="7" y1="16" x2="5" y2="20" />
+              <line x1="17" y1="16" x2="19" y2="20" />
+              <line x1="5" y1="20" x2="19" y2="20" />
             </svg>
           </div>
           <h3 class="feature-card__title">Metro Access</h3>
@@ -508,53 +568,73 @@
 
         <div class="feature-card fade-up">
           <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            <!-- Key with fob: valet parking service -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
               stroke-linejoin="round">
-              <rect x="1" y="3" width="15" height="13" />
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-              <circle cx="5.5" cy="18.5" r="2.5" />
-              <circle cx="18.5" cy="18.5" r="2.5" />
+              <circle cx="8" cy="8" r="3.5" />
+              <line x1="11.5" y1="11.5" x2="20" y2="20" />
+              <line x1="17" y1="17" x2="17" y2="20" />
+              <line x1="20" y1="17" x2="20" y2="20" />
             </svg>
           </div>
           <h3 class="feature-card__title">Valet Parking</h3>
-          <p class="feature-card__desc">Valet staff stationed at the entrance on Pulla Avenue for effortless arrivals.</p>
+          <p class="feature-card__desc">Valet staff stationed at the entrance on Pulla Avenue for effortless arrivals.
+          </p>
         </div>
 
         <div class="feature-card fade-up">
           <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            <!-- Snowflake: centralised air conditioning -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
               stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-              <polyline points="22 4 12 14.01 9 11.01" />
+              <line x1="12" y1="2" x2="12" y2="22" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M8.5 5.5 12 2l3.5 3.5" />
+              <path d="M8.5 18.5 12 22l3.5-3.5" />
+              <path d="M5.5 8.5 2 12l3.5 3.5" />
+              <path d="M18.5 8.5 22 12l-3.5 3.5" />
+              <line x1="8" y1="8" x2="16" y2="16" />
+              <line x1="16" y1="8" x2="8" y2="16" />
             </svg>
           </div>
           <h3 class="feature-card__title">Air-Conditioned</h3>
-          <p class="feature-card__desc">Centralised AC across Main Hall, Dining Hall, and Bridal/Guest preparation rooms.</p>
+          <p class="feature-card__desc">Centralised AC across Main Hall, Dining Hall, and Bridal/Guest preparation
+            rooms.</p>
         </div>
 
         <div class="feature-card fade-up">
           <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            <!-- Generator tower + water drop: 100% power & water -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
               stroke-linejoin="round">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              <rect x="3" y="8" width="11" height="10" rx="1" />
+              <line x1="3" y1="12" x2="14" y2="12" />
+              <line x1="7" y1="18" x2="7" y2="21" />
+              <line x1="10" y1="18" x2="10" y2="21" />
+              <line x1="17" y1="5" x2="21" y2="5" />
+              <path d="M19 5V3" />
+              <path d="M17 9c0 1.1.9 2 2 2s2-.9 2-2c0-1.5-2-4-2-4s-2 2.5-2 4z" />
             </svg>
           </div>
           <h3 class="feature-card__title">100% Power Backup</h3>
-          <p class="feature-card__desc">Full generator backup and 24/7 continuous water supply for uninterrupted events.</p>
+          <p class="feature-card__desc">Full generator backup and 24/7 continuous water supply for uninterrupted events.
+          </p>
         </div>
 
         <div class="feature-card fade-up">
           <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            <!-- Concierge bell: dedicated on-site team -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
               stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 00-3-3.87" />
-              <path d="M16 3.13a4 4 0 010 7.75" />
+              <path d="M12 3a1 1 0 0 1 1 1v1a7 7 0 0 1 6 6.9V13H5v-.1A7 7 0 0 1 11 5V4a1 1 0 0 1 1-1z" />
+              <line x1="2" y1="13" x2="22" y2="13" />
+              <line x1="2" y1="17" x2="22" y2="17" />
+              <line x1="9" y1="21" x2="15" y2="21" />
             </svg>
           </div>
           <h3 class="feature-card__title">Helpful Team</h3>
-          <p class="feature-card__desc">Dedicated on-site coordination team to support you from inquiry to event conclusion.</p>
+          <p class="feature-card__desc">Dedicated on-site coordination team to support you from inquiry to event
+            conclusion.</p>
         </div>
       </div>
     </div>
@@ -630,37 +710,59 @@
       <div class="video-showcase fade-up">
         <div class="video-player-card">
           <div class="video-player-card__media">
-            <video class="video-player-card__video" controls playsinline preload="metadata" poster="images/OFFICIAL/d923da3a-1849-4b51-ab5f-8a8a697c37f6.jpg" aria-label="LKN Banquet Hall Walkthrough Video Tour">
-              <source src="Videos/LKN%20WEB%20VDO.mov" type="video/mp4">
-              <source src="Videos/LKN%20WEB%20VDO.mov" type="video/quicktime">
+            <div class="video-player-card__badge-4k">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 12H9.5v-2h-2v2H6V9h1.5v2.5h2V9H11v6zm7-1c0 .55-.45 1-1 1h-4V9h4c.55 0 1 .45 1 1v5zm-1.5-.5V10.5h-2v4h2z"/>
+              </svg>
+              <span>4K Ultra HD</span>
+            </div>
+            <video class="video-player-card__video" id="tourVideo" controls playsinline preload="auto"
+              aria-label="LKN Banquet Hall Walkthrough Video Tour">
+              <source src="Videos/tour-video-4k.mp4" type="video/mp4">
+              <source src="Videos/hero-video.mp4" type="video/mp4">
+              <source src="https://res.cloudinary.com/digovrzd7/video/upload/q_auto:best,vc_auto/v1791274194/LKN_WEB_VDO_flf1hj.mp4"
+                type="video/mp4">
               Your browser does not support HTML5 video playback.
             </video>
           </div>
           <div class="video-player-card__body">
             <div class="video-player-card__badge">
               <span class="video-player-card__badge-dot"></span>
-              Official Video Tour
+              Official 4K Video Tour
             </div>
             <h3 class="video-player-card__title">Experience LKN Banquet in Motion</h3>
             <p class="video-player-card__desc">
-              Take an exclusive video tour of our celebration spaces — from the grand air-conditioned main celebration floor to the banquet dining hall and handcrafted stage setups.
+              Take an exclusive ultra-high-definition tour of our celebration spaces — from the grand air-conditioned main celebration
+              floor to the banquet dining hall and handcrafted stage setups.
             </p>
             <div class="video-player-card__features">
               <div class="video-player-card__feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Main Hall: 350 Seating Capacity
               </div>
               <div class="video-player-card__feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Dining Hall: 150 Seating Capacity
               </div>
               <div class="video-player-card__feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Valet Parking & 3-Min Walk to Shenoy Nagar Metro
               </div>
             </div>
-            <div>
+            <div class="video-player-card__actions">
               <a href="#contact" class="btn btn--primary">Book a Hall Visit →</a>
+              <button type="button" class="btn btn--outline" id="fullscreenVideoBtn"
+                onclick="const v = document.getElementById('tourVideo'); if(v.requestFullscreen){v.requestFullscreen();}else if(v.webkitRequestFullscreen){v.webkitRequestFullscreen();}">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px; vertical-align:middle;">
+                  <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>Full Screen
+              </button>
             </div>
           </div>
         </div>
@@ -679,87 +781,121 @@
       <div class="gallery__grid fade-up">
         <!-- 01: Main Hall 350 Seating -->
         <div class="gallery__item gallery__item--wide" data-category="venue" data-gallery-item>
-          <img src="images/OFFICIAL/d923da3a-1849-4b51-ab5f-8a8a697c37f6.jpg" alt="Main celebration hall with 350 seating capacity, elegant guest seating, and chandeliers" loading="lazy" decoding="async" width="600" height="300">
+          <img src="images/OFFICIAL/d923da3a-1849-4b51-ab5f-8a8a697c37f6.jpg"
+            alt="Main celebration hall with 350 seating capacity, elegant guest seating, and chandeliers" loading="lazy"
+            decoding="async" width="600" height="300">
         </div>
 
         <!-- 02: Exterior Night View -->
         <div class="gallery__item gallery__item--tall" data-category="venue" data-gallery-item>
-          <img src="images/OFFICIAL/c5167990-f41e-4170-ac24-be31bcce1274.jpg" alt="LKN Banquet illuminated exterior night view and grand entrance on Pulla Avenue" loading="lazy" decoding="async" width="400" height="550">
+          <img src="images/OFFICIAL/c5167990-f41e-4170-ac24-be31bcce1274.jpg"
+            alt="LKN Banquet illuminated exterior night view and grand entrance on Pulla Avenue" loading="lazy"
+            decoding="async" width="400" height="550">
         </div>
 
         <!-- 03: Modern Reception Arches -->
         <div class="gallery__item" data-category="reception" data-gallery-item>
-          <img src="images/OFFICIAL/464a4d3a-e9aa-4aec-9352-51e88f371c17.jpg" alt="Modern floral arch reception stage with chandeliers and bridal sofa" loading="lazy" decoding="async" width="400" height="300">
+          <img src="images/OFFICIAL/464a4d3a-e9aa-4aec-9352-51e88f371c17.jpg"
+            alt="Modern floral arch reception stage with chandeliers and bridal sofa" loading="lazy" decoding="async"
+            width="400" height="300">
         </div>
 
         <!-- 04: Tirupati Balaji Mandapam -->
         <div class="gallery__item gallery__item--wide" data-category="wedding" data-gallery-item>
-          <img src="images/OFFICIAL/d98f46da-2fa5-4965-9820-8453de84c2f3.jpg" alt="Grand Tirupati Balaji and Padmavathi Thayar gold temple mandapam with floral garlands" loading="lazy" decoding="async" width="600" height="300">
+          <img src="images/OFFICIAL/d98f46da-2fa5-4965-9820-8453de84c2f3.jpg"
+            alt="Grand Tirupati Balaji and Padmavathi Thayar gold temple mandapam with floral garlands" loading="lazy"
+            decoding="async" width="600" height="300">
         </div>
 
         <!-- 05: Luxury Stage with Red/White Florals -->
         <div class="gallery__item" data-category="reception" data-gallery-item>
-          <img src="images/OFFICIAL/6bdb3f0e-a9b0-4d92-a4c3-110022e9ebfe.jpg" alt="Luxury flower decorated stage with bridal sofa and chandeliers" loading="lazy" decoding="async" width="400" height="300">
+          <img src="images/OFFICIAL/6bdb3f0e-a9b0-4d92-a4c3-110022e9ebfe.jpg"
+            alt="Luxury flower decorated stage with bridal sofa and chandeliers" loading="lazy" decoding="async"
+            width="400" height="300">
         </div>
 
         <!-- 06: Full Hall View with Chandelier -->
         <div class="gallery__item gallery__item--wide" data-category="venue" data-gallery-item>
-          <img src="images/OFFICIAL/5d826e36-981a-4b63-ba96-4aafa5e00000.jpg" alt="Full view of celebration hall with guest banquet chairs and circular floral stage" loading="lazy" decoding="async" width="600" height="300">
+          <img src="images/OFFICIAL/5d826e36-981a-4b63-ba96-4aafa5e00000.jpg"
+            alt="Full view of celebration hall with guest banquet chairs and circular floral stage" loading="lazy"
+            decoding="async" width="600" height="300">
         </div>
 
         <!-- 07: Kamadhenu Pichwai Decor -->
         <div class="gallery__item" data-category="family" data-gallery-item>
-          <img src="images/OFFICIAL/8c5f9f4b-2874-4bfe-af52-e1a238518a46.jpg" alt="Traditional Pichwai Kamadhenu stage backdrop with royal gold throne for Seemantham and family functions" loading="lazy" decoding="async" width="400" height="300">
+          <img src="images/OFFICIAL/8c5f9f4b-2874-4bfe-af52-e1a238518a46.jpg"
+            alt="Traditional Pichwai Kamadhenu stage backdrop with royal gold throne for Seemantham and family functions"
+            loading="lazy" decoding="async" width="400" height="300">
         </div>
 
         <!-- 08: Dining Hall 150 Seating -->
         <div class="gallery__item" data-category="venue" data-gallery-item>
-          <img src="images/OFFICIAL/94ec05be-2ecf-4877-8a2b-62cb5893781f.jpg" alt="Spacious air-conditioned banquet dining hall setup with long tables for 150 guests" loading="lazy" decoding="async" width="400" height="300">
+          <img src="images/OFFICIAL/94ec05be-2ecf-4877-8a2b-62cb5893781f.jpg"
+            alt="Spacious air-conditioned banquet dining hall setup with long tables for 150 guests" loading="lazy"
+            decoding="async" width="400" height="300">
         </div>
 
         <!-- 09: Floral Mandapam with Ganesha -->
         <div class="gallery__item" data-category="wedding" data-gallery-item>
-          <img src="images/OFFICIAL/4226639f-288c-409a-95b1-5fec44da3c10.jpg" alt="Traditional wedding mandapam with gold pillars, heavy floral canopy, and Ganesha motif" loading="lazy" decoding="async" width="400" height="300">
+          <img src="images/OFFICIAL/4226639f-288c-409a-95b1-5fec44da3c10.jpg"
+            alt="Traditional wedding mandapam with gold pillars, heavy floral canopy, and Ganesha motif" loading="lazy"
+            decoding="async" width="400" height="300">
         </div>
 
         <!-- 10: Red Rose Floral Wall Stage -->
         <div class="gallery__item gallery__item--wide" data-category="reception" data-gallery-item>
-          <img src="images/OFFICIAL/6d686f88-6d4b-42d7-bba6-03f06e004ab2.jpg" alt="Red rose floral wall wedding reception stage with illuminated monogram" loading="lazy" decoding="async" width="600" height="300">
+          <img src="images/OFFICIAL/6d686f88-6d4b-42d7-bba6-03f06e004ab2.jpg"
+            alt="Red rose floral wall wedding reception stage with illuminated monogram" loading="lazy" decoding="async"
+            width="600" height="300">
         </div>
 
         <!-- 11: Royal Golden Sofa Stage -->
         <div class="gallery__item" data-category="reception" data-gallery-item>
-          <img src="images/OFFICIAL/4694fe35-3979-4a9f-83dc-c3bc8dacf665.jpg" alt="Royal golden sofa stage setup with fairy light drapes and floral frame" loading="lazy" decoding="async" width="400" height="300">
+          <img src="images/OFFICIAL/4694fe35-3979-4a9f-83dc-c3bc8dacf665.jpg"
+            alt="Royal golden sofa stage setup with fairy light drapes and floral frame" loading="lazy" decoding="async"
+            width="400" height="300">
         </div>
 
         <!-- 12: Lotus Motif Stage -->
         <div class="gallery__item" data-category="family" data-gallery-item>
-          <img src="images/OFFICIAL/b75000d3-f886-4b7a-8256-2ec6877fa9de.jpg" alt="Lotus theme traditional backdrop with silver-gold royal sofa and brass lamps" loading="lazy" decoding="async" width="400" height="300">
+          <img src="images/OFFICIAL/b75000d3-f886-4b7a-8256-2ec6877fa9de.jpg"
+            alt="Lotus theme traditional backdrop with silver-gold royal sofa and brass lamps" loading="lazy"
+            decoding="async" width="400" height="300">
         </div>
 
         <!-- 13: Circular Floral Wreath Stage -->
         <div class="gallery__item" data-category="reception" data-gallery-item>
-          <img src="images/OFFICIAL/63d2c12a-05f3-4251-8fab-e6de379c5243.jpg" alt="Decorated wedding reception stage with flower garlands and seating" loading="lazy" decoding="async" width="400" height="300">
+          <img src="images/OFFICIAL/63d2c12a-05f3-4251-8fab-e6de379c5243.jpg"
+            alt="Decorated wedding reception stage with flower garlands and seating" loading="lazy" decoding="async"
+            width="400" height="300">
         </div>
 
         <!-- 14: AC Bridal & Guest Room -->
         <div class="gallery__item" data-category="venue" data-gallery-item>
-          <img src="images/OFFICIAL/b0a5793b-6904-4187-93e9-45a33c1ec5f0.jpg" alt="Air-conditioned guest room and bridal suite at LKN Banquet" loading="lazy" decoding="async" width="400" height="300">
+          <img src="images/OFFICIAL/b0a5793b-6904-4187-93e9-45a33c1ec5f0.jpg"
+            alt="Air-conditioned guest room and bridal suite at LKN Banquet" loading="lazy" decoding="async" width="400"
+            height="300">
         </div>
 
         <!-- 15: Peach Draped Stage -->
         <div class="gallery__item" data-category="family" data-gallery-item>
-          <img src="images/OFFICIAL/6c409a79-001a-4cde-8a1e-970657d8d547.jpg" alt="Peach drapery and chandeliers stage setup for engagement and betrothal ceremonies" loading="lazy" decoding="async" width="400" height="300">
+          <img src="images/OFFICIAL/6c409a79-001a-4cde-8a1e-970657d8d547.jpg"
+            alt="Peach drapery and chandeliers stage setup for engagement and betrothal ceremonies" loading="lazy"
+            decoding="async" width="400" height="300">
         </div>
 
         <!-- 16: Botanical Green & White Stage -->
         <div class="gallery__item gallery__item--wide" data-category="reception" data-gallery-item>
-          <img src="images/OFFICIAL/c4e0f0da-9eb3-4330-ac94-43daba037905.jpg" alt="Modern botanical green and white floral stage for receptions and presentations" loading="lazy" decoding="async" width="600" height="300">
+          <img src="images/OFFICIAL/c4e0f0da-9eb3-4330-ac94-43daba037905.jpg"
+            alt="Modern botanical green and white floral stage for receptions and presentations" loading="lazy"
+            decoding="async" width="600" height="300">
         </div>
 
         <!-- 17: Foliage & Golden Pillars Stage -->
         <div class="gallery__item gallery__item--wide" data-category="reception" data-gallery-item>
-          <img src="images/OFFICIAL/d5db0912-b28c-4eee-8318-515385d01718.jpg" alt="Lush foliage backdrop with golden pillars and chandelier stage decoration" loading="lazy" decoding="async" width="600" height="300">
+          <img src="images/OFFICIAL/d5db0912-b28c-4eee-8318-515385d01718.jpg"
+            alt="Lush foliage backdrop with golden pillars and chandelier stage decoration" loading="lazy"
+            decoding="async" width="600" height="300">
         </div>
       </div>
   </section>
@@ -998,7 +1134,8 @@
           </button>
           <div class="faq-item__answer" id="faq-3" role="region">
             <div class="faq-item__answer-inner">
-              Yes. The Main Hall, Dining Hall, and stay rooms are fully centralised air-conditioned for year-round comfort.
+              Yes. The Main Hall, Dining Hall, and stay rooms are fully centralised air-conditioned for year-round
+              comfort.
             </div>
           </div>
         </div>
@@ -1070,7 +1207,9 @@
           </button>
           <div class="faq-item__answer" id="faq-7" role="region">
             <div class="faq-item__answer-inner">
-              <strong>Own decoration is NOT allowed.</strong> To preserve stage infrastructure, electrical safety standards, and overall venue aesthetics, all stage and hall décor is exclusively managed through our expert in-house decoration packages.
+              <strong>Own decoration is NOT allowed.</strong> To preserve stage infrastructure, electrical safety
+              standards, and overall venue aesthetics, all stage and hall décor is exclusively managed through our
+              expert in-house decoration packages.
             </div>
           </div>
         </div>
@@ -1127,7 +1266,9 @@
           </button>
           <div class="faq-item__answer" id="faq-10" role="region">
             <div class="faq-item__answer-inner">
-              <strong>Advance Payment: 50% of the total cost</strong> is required to confirm and reserve your booking date. We accept UPI, bank transfers (NEFT/IMPS), cheques, and cash. Balance payment is settled prior to the event commencement.
+              <strong>Advance Payment: 50% of the total cost</strong> is required to confirm and reserve your booking
+              date. We accept UPI, bank transfers (NEFT/IMPS), cheques, and cash. Balance payment is settled prior to
+              the event commencement.
             </div>
           </div>
         </div>
