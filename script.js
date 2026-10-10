@@ -6,8 +6,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ── Verified Venue Data ──
   const VENUE_DATA = {
-    capacity: '10 to 500 Guests',
-    rooms: 'AC Guest & Bridal Rooms with Attached Washrooms',
+    capacity: '350 Seated Guests, 800 Floating Guests',
+    rooms: '7 Rooms + 1 Guest House (AC with Attached Washrooms)',
     phone: '078248 58687',
     landline: '044 35686481',
     email: 'lknbanquet@gmail.com',
